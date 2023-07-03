@@ -1,0 +1,23 @@
+.form {
+  max-width: 50%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 660px) {
+  .form {
+    max-width: initial;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+
+    button {
+      width: 100%;
+    }
+  }
+}

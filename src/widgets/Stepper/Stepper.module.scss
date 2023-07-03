@@ -1,0 +1,125 @@
+.stepsContainer {
+    min-height: 100px;
+    max-height: 130px;
+
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-between;
+}
+
+.step {
+    display: flex;
+    justify-content: space-between;
+    cursor: default;
+    position: relative;
+
+    &:first-child {
+        flex: 1;
+    }
+    &:nth-child(2) {
+        flex: 1;
+    }
+}
+
+.step .line {
+    border-width: 4px;
+    border-style: solid;
+    position: absolute;
+    top: -1%;
+    left: 1%;
+    width: calc(100%);
+    transition: border-color 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.step .circle {
+    width: 16px;
+    height: 16px;
+    padding: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #ccc;
+    position: relative;
+    top: -5px;
+    z-index: 1;
+}
+
+.step .circle::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.stepActive .circle {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.stepDone .circle {
+    background-color: var(--color-primary);
+    // color: #eee;
+
+    background-image: url('../../shared//assets//arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    &::before {
+        background-color: initial;
+    }
+}
+
+.stepInactive .circle {
+    background: #a6a6a6;
+    color: #000;
+}
+
+.label {
+    position: absolute;
+    top: 25px;
+    left: 4px;
+
+    font-weight: 600;
+}
+
+.stepActive .label {
+    color: var(--color-primary);
+    transition: color 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.stepDone .label {
+    color: var(--color-primary);
+}
+
+.stepInactive .label {
+    color: #a6a6a6;
+}
+
+.stepDone .line {
+    border-color: var(--color-primary);
+}
+
+.stepInactive .line,
+.stepActive .line {
+    border-color: #eee;
+}
+
+.step:first-of-type .label {
+    left: 0;
+}
+
+.step:nth-of-type(2) .label {
+    left: 4px;
+}
+.step:nth-last-of-type(1) .label {
+    left: 6px;
+}
+
+@media (max-width: 950px) {
+    .stepsContainer {
+        min-height: 75px;
+    }
+}

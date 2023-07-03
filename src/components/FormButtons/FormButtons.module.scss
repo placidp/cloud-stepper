@@ -1,0 +1,27 @@
+.formButtons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonPrevious {
+  background-color: #fff;
+
+  &:focus {
+    outline: 1px thick double var(--color-primary);
+  }
+
+  &:active {
+    outline: none;
+  }
+}
+
+@media (max-width: 660px) {
+  .formButtons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  button {
+    width: 100%;
+  }
+}

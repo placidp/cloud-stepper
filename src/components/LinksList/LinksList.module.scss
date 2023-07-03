@@ -1,0 +1,10 @@
+.linksList {
+  display: flex;
+  justify-content: space-between;
+  width: min-content;
+  gap: 10px;
+
+  @media (max-width: 950px) {
+    gap: 5px;
+  }
+}

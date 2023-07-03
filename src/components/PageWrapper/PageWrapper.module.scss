@@ -1,0 +1,12 @@
+.container {
+  display: grid;
+
+  // TODO
+  grid-template-rows: auto 3fr;
+  grid-gap: 25px;
+
+  @media (max-width: 950px) {
+    grid-template-rows: auto 3fr;
+    grid-gap: 15px;
+  }
+}

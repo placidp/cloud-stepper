@@ -1,0 +1,48 @@
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  .input {
+    background-color: #fff;
+    border: 1px solid var(--color-gray);
+    border-radius: 4px;
+    padding: 12px;
+
+    &:hover {
+      border-color: var(--color-primary);
+    }
+
+    &:focus-visible {
+      border-color: var(--color-primary);
+      outline: 1px solid var(--color-primary);
+    }
+  }
+
+  .removeIconContainer {
+    .removeButton {
+      border: none;
+      background-color: #fff;
+
+      &:hover {
+        border-color: var(--color-primary);
+        cursor: pointer;
+      }
+
+      &:focus-visible {
+        border-radius: 2px;
+        outline: 2px solid var(--color-primary);
+        outline-offset: 4px;
+      }
+    }
+  }
+}
+
+.icon {
+  fill: #ccc;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    fill: var(--color-error);
+  }
+}

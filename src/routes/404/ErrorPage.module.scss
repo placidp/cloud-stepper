@@ -1,0 +1,23 @@
+.errorPage {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  max-width: 900px;
+  background-color: var(--bg-color-secondary);
+
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 25px;
+
+  border-radius: 12px 12px 0 0;
+
+  @media (max-width: 950px) {
+    height: 100vh;
+    margin-top: initial;
+    margin-bottom: initial;
+  }
+
+  @media (max-width: 380px) {
+    padding: 20px;
+  }
+}

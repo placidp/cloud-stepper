@@ -1,0 +1,23 @@
+:root {
+  // colors
+  --color-primary: #5558fa;
+  --color-primary-lighten: color-mix(in srgb, var(--color-primary) 30%, white);
+  --color-primary-darken: color-mix(in srgb, var(--color-primary) 70%, black);
+  --color-error: #ed4d59;
+
+  --color-lightblue: #d5e4f7;
+  --color-gray: rgba(0, 0, 0, 0.16);
+
+  --bg-color-primary: #f4f4f4;
+  --bg-color-secondary: #fff;
+  --bg-color-tertiary: #cfcfcf;
+  --bg-color-gray: rgba(0, 0, 0, 0.04);
+
+  --avatar-size: 40px;
+  --avatar-size-small: 28px;
+  --avatar-font-weight: 400px;
+
+  --full-name-size: 20px;
+  --label-size: 14px;
+  --link-size: 12px;
+}
