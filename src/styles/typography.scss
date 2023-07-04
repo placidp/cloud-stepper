@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'SB Sans Interface';
+  src: url('./fonts/SB Sans Interface.otf') format('opentype');
+
+  font-display: fallback;
+}
+
+* {
+  font-family: SB Sans Interface;
+}

@@ -1,0 +1,83 @@
+.modalContainer {
+    border-radius: 12px;
+    width: 100%;
+    max-width: 460px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 520px) {
+        padding: 16px;
+    }
+
+    .error {
+        width: 460px;
+        height: 100%;
+        gap: 22px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: 520px) {
+            width: 90%;
+        }
+
+        .errorTitle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+
+    .error {
+        .errorHeader {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .iconClose {
+                width: 28px;
+                height: 28px;
+                cursor: pointer;
+                fill: #ccc;
+                transition: all 0.1s ease-in-out;
+
+                &:hover {
+                    fill: var(--color-error);
+                }
+            }
+        }
+
+        .errorFooter {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            @media (max-width: 520px) {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.imageContainer {
+    width: 80px;
+    height: 80px;
+    margin: 26px;
+
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.errorImage {
+    background-color: #fce5e6;
+}
