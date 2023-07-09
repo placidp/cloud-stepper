@@ -1,7 +1,6 @@
 import {
     ChangeEvent,
     DetailedHTMLProps,
-    FC,
     InputHTMLAttributes,
     forwardRef,
     useEffect,
